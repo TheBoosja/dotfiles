@@ -1,0 +1,4 @@
+URxvt.font: xft:Hack:style=Regular:size=10
+URxvt.scrollBar: false
+URxvt.background: black
+URxvt.foreground: white
