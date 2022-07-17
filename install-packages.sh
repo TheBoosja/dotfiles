@@ -3,7 +3,7 @@ log_file=~/install_progress_log.txt
 sudo apt update
 sudo apt upgrade
 
-sudo apt curl
+sudo apt install curl
 if type -p curl > /dev/null; then
   echo "curl installed" >> $log_file
 
