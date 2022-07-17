@@ -1,7 +1,29 @@
+# Tested on Ubuntu 22.04
 log_file=~/install_progress_log.txt
 
 sudo apt update
-sudo apt upgrade
+sudo apt upgrade -y
+
+sudo apt install i3
+if type -p i3 > /dev/null; then
+  echo "i3 installed" >> $log_file
+else
+  echo "i3 FAILED" >> $log_file
+fi
+
+sudo apt install rxvt-unicode
+if type -p urxvt > /dev/null; then
+  echo "urxvt installed" >> $log_file
+else
+  echo "urxvt FAILED" >> $log_file
+fi
+
+sudo apt install neovim
+if type -p neovim > /dev/null; then
+  echo "neovim installed" >> $log_file
+else
+  echo "neovim FAILED" >> $log_file
+fi
 
 sudo apt install curl
 if type -p curl > /dev/null; then
