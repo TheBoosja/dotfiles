@@ -4,28 +4,28 @@ log_file=~/install_progress_log.txt
 sudo apt update
 sudo apt upgrade -y
 
-sudo apt install i3
+sudo apt install i3 -y
 if type -p i3 > /dev/null; then
   echo "i3 installed" >> $log_file
 else
   echo "i3 FAILED" >> $log_file
 fi
 
-sudo apt install rxvt-unicode
+sudo apt install rxvt-unicode -y
 if type -p urxvt > /dev/null; then
   echo "urxvt installed" >> $log_file
 else
   echo "urxvt FAILED" >> $log_file
 fi
 
-sudo apt install neovim
-if type -p neovim > /dev/null; then
+sudo apt install neovim -y
+if type -p nvim > /dev/null; then
   echo "neovim installed" >> $log_file
 else
   echo "neovim FAILED" >> $log_file
 fi
 
-sudo apt install curl
+sudo apt install curl -y
 if type -p curl > /dev/null; then
   echo "curl installed" >> $log_file
 else
