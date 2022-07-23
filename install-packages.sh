@@ -4,7 +4,7 @@ log_file=~/install_progress_log.txt
 sudo add-apt-repository ppa:regolith-linux/release -y
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install i3 i3-gaps i3blocks rxvt-unicode neovim curl -y
+sudo apt install i3-gaps i3blocks rxvt-unicode neovim curl -y
 
 if type -p i3 > /dev/null; then
   echo "i3 installed" >> $log_file
