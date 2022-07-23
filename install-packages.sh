@@ -44,6 +44,12 @@ else
 fi
 
 
+# Neovim vim-plug
+if type -p nvim > /dev/null; then
+  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+fi
+
 # Node (nvm)
 if type -p curl > /dev/null; then
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
