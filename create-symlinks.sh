@@ -18,11 +18,21 @@ log_file=~/install_progress_log.txt
 echo "Removing existing dotfiles..." >> $log_file
 sudo rm -rf ~/.Xresources > /dev/null 2>&1
 sudo rm -rf ~/.bash_aliases > /dev/null 2>&1
-sudo rm -rf ~/.config/i3 > /dev/null 2>&1
-sudo rm -rf ~/.config/i3blocks > /dev/null 2>&1
-sudo rm -rf ~/.config/nvim > /dev/null 2>&1
+sudo rm -rf ~/.config/i3/config > /dev/null 2>&1
+sudo rm -rf ~/.config/i3blocks/config > /dev/null 2>&1
+sudo rm -rf ~/.config/nvim/init.vim > /dev/null 2>&1
+sudo rm -rf ~/.config/nvim/coc-settings.json > /dev/null 2>&1
 #sudo rm -rf ~/.config/coc > /dev/null 2>&1
 echo "Removing done" >> $log_file
+
+################################
+#                              #
+#     Checking directories     #
+#                              #
+################################
+[ ! -d ~/.config/i3 ] && mkdir ~/.config/i3
+[ ! -d ~/.config/i3blocks ] && mkdir ~/.config/i3blocks
+[ ! -d ~/.config/nvim ] && mkdir ~/.config/nvim
 
 ################################
 #                              #
