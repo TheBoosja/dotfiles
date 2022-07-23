@@ -4,43 +4,39 @@ log_file=~/install_progress_log.txt
 sudo add-apt-repository ppa:regolith-linux/release -y
 sudo apt update -y
 sudo apt upgrade -y
+sudo apt install i3 i3-gaps i3blocks rxvt-unicode neovim curl -y
 
-sudo apt install i3 -y
 if type -p i3 > /dev/null; then
   echo "i3 installed" >> $log_file
 else
   echo "i3 FAILED" >> $log_file
 fi
 
-sudo apt install i3-gaps -y
-if type -p i3-gaps > /dev/null; then
+I3GAPS_OK=$(dpkg -s i3-gaps | grep "install ok installed")
+if [ "" != "$I3GAPS_OK" ]; then
   echo "i3-gaps installed" >> $log_file
 else
   echo "i3-gaps FAILED" >> $log_file
 fi
 
-sudo apt install i3blocks -y
 if type -p i3blocks > /dev/null; then
   echo "i3blocks installed" >> $log_file
 else
   echo "i3blocks FAILED" >> $log_file
 fi
 
-sudo apt install rxvt-unicode -y
 if type -p urxvt > /dev/null; then
   echo "urxvt installed" >> $log_file
 else
   echo "urxvt FAILED" >> $log_file
 fi
 
-sudo apt install neovim -y
 if type -p nvim > /dev/null; then
   echo "neovim installed" >> $log_file
 else
   echo "neovim FAILED" >> $log_file
 fi
 
-sudo apt install curl -y
 if type -p curl > /dev/null; then
   echo "curl installed" >> $log_file
 else
