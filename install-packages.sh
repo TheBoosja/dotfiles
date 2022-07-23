@@ -1,10 +1,25 @@
 # Tested on Ubuntu 22.04
 log_file=~/install_progress_log.txt
 
+sudo add-apt-repository ppa:regolith-linux/release
 sudo apt update
 sudo apt upgrade -y
 
 sudo apt install i3 -y
+if type -p i3 > /dev/null; then
+  echo "i3 installed" >> $log_file
+else
+  echo "i3 FAILED" >> $log_file
+fi
+
+sudo apt install i3-gaps -y
+if type -p i3 > /dev/null; then
+  echo "i3 installed" >> $log_file
+else
+  echo "i3 FAILED" >> $log_file
+fi
+
+sudo apt install i3blocks -y
 if type -p i3 > /dev/null; then
   echo "i3 installed" >> $log_file
 else
