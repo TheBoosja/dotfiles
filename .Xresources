@@ -1,0 +1,19 @@
+URxvt.font: xft:UbuntuMono:style=normal:antialiasing=true:size=12
+URxvt.boldFont: xft:UbuntuMono:style=Bold:antialiasing=true:size=14
+URxvt.scrollBar: false
+URxvt.foreground: white
+URxvt.intensityStyles: false
+
+URxvt*depth: 32
+URxvt.background: [85]#000000
+
+! Do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! Scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! Scroll back to the bottom on keypress
+URxvt*ScrollTtyKeypress: true
+
+URxvt.perl-ext-common: default,matcher,url-select,close-gracefully,selection-to-clipboard
