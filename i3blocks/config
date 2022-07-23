@@ -1,0 +1,10 @@
+
+[battery]
+command=battery.sh
+interval=10
+
+[click-me]
+align=center
+full_text=Click me!
+min_width=Button=? x=? y=?
+command=echo "Button=$button x=$x y=$y"
