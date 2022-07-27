@@ -53,10 +53,10 @@ echo "Symlinking done" >> $log_file
 
 ################################
 #                              #
-#      Set default shell       #
+#        Misc commands         #
 #                              #
 ################################
-#sudo chsh -s /bin/urxvt
+nvim +PlugInstall +qa
 
 ################################
 #                              #
