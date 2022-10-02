@@ -23,6 +23,8 @@ sudo rm -rf ~/.config/i3/config > /dev/null 2>&1
 sudo rm -rf ~/.config/i3blocks/config > /dev/null 2>&1
 sudo rm -rf ~/.config/nvim/init.vim > /dev/null 2>&1
 sudo rm -rf ~/.config/nvim/coc-settings.json > /dev/null 2>&1
+sudo rm -rf ~/.config/xmonad/xmonad.hs > /dev/null 2>&1
+sudo rm -rf ~/.config/xmobar/xmobarrc > /dev/null 2>&1
 #sudo rm -rf ~/.config/coc > /dev/null 2>&1
 echo "Removing done" >> $log_file
 
@@ -34,6 +36,8 @@ echo "Removing done" >> $log_file
 [ ! -d ~/.config/i3 ] && mkdir ~/.config/i3
 [ ! -d ~/.config/i3blocks ] && mkdir ~/.config/i3blocks
 [ ! -d ~/.config/nvim ] && mkdir ~/.config/nvim
+[ ! -d ~/.config/xmonad ] && mkdir ~/.config/xmonad
+[ ! -d ~/.config/xmobar ] && mkdir ~/.config/xmobar
 
 ################################
 #                              #
@@ -48,6 +52,8 @@ ln -sf $dotfiles_dir/i3/config ~/.config/i3/config
 ln -sf $dotfiles_dir/i3blocks/config ~/.config/i3blocks/config
 ln -sf $dotfiles_dir/nvim/init.vim ~/.config/nvim/init.vim
 ln -sf $dotfiles_dir/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
+ln -sf $dotfiles_dir/xmonad/xmonad.hs ~/.config/xmonad/xmonad.hs
+ln -sf $dotfiles_dir/xmobar/xmobarrc ~/.config/xmobar/xmobarrc
 #ln -sf $dotfiles_dir/nvim/coc ~/.config/coc
 echo "Symlinking done" >> $log_file
 
