@@ -1,4 +1,4 @@
-URxvt.font: xft:UbuntuMono:style=normal:antialiasing=true:size=12
+URxvt.font: xft:SourceCodePro:style=normal:antialiasing=true:size=12
 URxvt.boldFont: xft:UbuntuMono:style=Bold:antialiasing=true:size=14
 URxvt.scrollBar: false
 URxvt.foreground: white

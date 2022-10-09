@@ -198,3 +198,6 @@ nmap <C-b> :NERDTreeToggle<CR>
 "autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Disable continuation of comments on <new line>
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
