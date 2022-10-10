@@ -1,7 +1,7 @@
 # Boosja's Custom Arch Install script
 log_file=~install_progress_log.txt
 
-sudo pacman -S awesome neovim curl kitty zsh polybar xmonad xmonad-contrib xmobar
+sudo pacman -S awesome neovim curl kitty zsh polybar xmonad xmonad-contrib xmobar xdotool
 
 # Neovim vim-plug
 if type -p nvim > /dev/null; then
