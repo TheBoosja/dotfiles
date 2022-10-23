@@ -8,3 +8,5 @@ run() {
 }
 
 run ~/.config/polybar/launch.sh
+run ~/.screenlayout/monitor.sh
+run picom
