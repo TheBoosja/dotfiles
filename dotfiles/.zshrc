@@ -16,6 +16,9 @@ bindkey -v
 
 export ZSH_COMPDUMP=~/.cache/zsh/.zcompdump-$HOST
 
+export TERMINAL=kitty
+export EDITOR=vim
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -31,9 +34,10 @@ PROMPT='%2~ %(!.%F{red}#%f.>) '
 RPROMPT='${vcs_info_msg_0_}'
 zstyle ':vcs_info:git:*' formats '%F{242}%b%f'
 zstyle ':vcs_info:*' enable git
-export EDITOR=kitty
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+PATH="$HOME/.yarn/bin:$PATH"
 
 alias ll='LC_COLLATE=C.UTF8 ls -Al --group-directories-first --color=auto'
