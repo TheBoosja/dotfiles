@@ -111,7 +111,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 mytextclock = wibox.widget.textclock()
 
 mattilsynetwidget = wibox.widget.textbox()
-mattilsynetwidget.text = "   Mattilsynet (MI)   "
+mattilsynetwidget.text = "   Mathias   "
 
 -- get next percent
 function getNextPercent (mode, val)
@@ -285,29 +285,29 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    -- s.mywibox = awful.wibar({ position = "top", screen = s })
+    s.mywibox = awful.wibar({ position = "top", screen = s })
 
     -- Add widgets to the wibox
-    -- s.mywibox:setup {
-    --     layout = wibox.layout.align.horizontal,
-    --     { -- Left widgets
-    --         layout = wibox.layout.fixed.horizontal,
-    --         -- mylauncher,
-    --         mattilsynetwidget,
-    --         s.mytaglist,
-    --         s.mypromptbox,
-    --     },
-    --     nil,-- s.mytasklist, -- Middle widget
-    --     { -- Right widgets
-    --         layout = wibox.layout.fixed.horizontal,
-    --         mykeyboardlayout,
-    --         wibox.widget.systray(),
-    --         tb_volume,
-    --         tb_brightness,
-    --         mytextclock,
-    --         s.mylayoutbox,
-    --     },
-    -- }
+    s.mywibox:setup {
+        layout = wibox.layout.align.horizontal,
+        { -- Left widgets
+            layout = wibox.layout.fixed.horizontal,
+            -- mylauncher,
+            mattilsynetwidget,
+            s.mytaglist,
+            s.mypromptbox,
+        },
+        nil,-- s.mytasklist, -- Middle widget
+        { -- Right widgets
+            layout = wibox.layout.fixed.horizontal,
+            mykeyboardlayout,
+            wibox.widget.systray(),
+            tb_volume,
+            tb_brightness,
+            mytextclock,
+            s.mylayoutbox,
+        },
+    }
 end)
 -- }}}
 
@@ -572,7 +572,7 @@ awful.rules.rules = {
           "pinentry",
         },
         class = {
-          "Arandr",
+          -- "Arandr",
           "Blueman-manager",
           "Gpick",
           "Kruler",
@@ -601,8 +601,8 @@ awful.rules.rules = {
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { screen = 1, tag = "2" } },
+    { rule = { class = "Firefox" },
+      properties = { tag = "2" } },
 }
 -- }}}
 
