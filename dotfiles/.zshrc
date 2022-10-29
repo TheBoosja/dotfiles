@@ -26,14 +26,14 @@ export EDITOR=vim
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-autoload -Uz vcs_info
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
-setopt prompt_subst
-PROMPT='%2~ %(!.%F{red}#%f.>) '
-RPROMPT='${vcs_info_msg_0_}'
-zstyle ':vcs_info:git:*' formats '%F{242}%b%f'
-zstyle ':vcs_info:*' enable git
+# autoload -Uz vcs_info
+# precmd_vcs_info() { vcs_info }
+# precmd_functions+=( precmd_vcs_info )
+# setopt prompt_subst
+# PROMPT='%2~ %(!.%F{red}#%f.>) '
+# RPROMPT='${vcs_info_msg_0_}'
+# zstyle ':vcs_info:git:*' formats '%F{242}%b%f'
+# zstyle ':vcs_info:*' enable git
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -41,3 +41,5 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 PATH="$HOME/.yarn/bin:$PATH"
 
 alias ll='LC_COLLATE=C.UTF8 ls -Al --group-directories-first --color=auto'
+
+eval "$(starship init zsh)"
