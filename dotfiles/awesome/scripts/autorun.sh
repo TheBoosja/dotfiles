@@ -7,6 +7,6 @@ run() {
   fi
 }
 
-run ~/.config/polybar/launch.sh
+# run ~/.config/polybar/launch.sh
 run ~/.screenlayout/monitor.sh
-run picom
+# run picom
