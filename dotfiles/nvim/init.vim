@@ -87,14 +87,19 @@ set cmdheight=2
 " menuone: Show popup even with only one option
 set completeopt=noinsert,menuone
 "set completeopt=noinsert,menuone,noselect
+set colorcolumn=100
 " Highlights current line
 set cursorline
 " Inserts appropriate number of spaces in tab
 set expandtab
-" Buffers are hidden when left, instead off closed entirely
+" Buffers are hidden when left, instead of closed entirely
 set hidden
 " Always displays a status line in window
 set laststatus=2
+" No sound on errors
+set noerrorbells
+" No highlight when searching
+set nohlsearch
 " Something with Replace and Visual mode in Insert mode
 set noshowmode
 " Don't wrap text
@@ -117,6 +122,7 @@ set smartindent
 set splitright
 " Number of spaces a tab counts for
 set tabstop=2
+set softtabstop=2
 " Sets title of window
 set title
 " Timeout to wait for command to complete
