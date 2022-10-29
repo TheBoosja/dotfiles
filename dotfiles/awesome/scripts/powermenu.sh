@@ -14,7 +14,7 @@ if test "$rtrn" = "0"; then
       break
       ;;
     Lock)
-      ~/.config/awesome/blur-lock.sh
+      ~/.config/awesome/scripts/lock.sh
       break
       ;;
     *)
